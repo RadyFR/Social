@@ -13,6 +13,7 @@ app.set("views", "views")
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,"public")));
+app.use("/image",express.static(path.join(__dirname,"image")));
 
 app.use(Login)
 app.use(notfound)
