@@ -1,6 +1,6 @@
 const {Sequelize} = require("sequelize");
 
-const cone = new Sequelize("socialnetworld","root","1234",{
+const cone = new Sequelize("socialnetworld","root","root",{
     host: "localhost",
     port: 3306,
     dialect:"mysql"

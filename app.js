@@ -3,7 +3,8 @@ const {engine} = require("express-handlebars")
 const path = require("path");
 const notfound = require("./Routes/404NotFound")
 const Login = require("./Routes/Login")
-
+const cone = require("./DB/Coneccion")
+const usuarios = require("./Model/LoginModel")
 const app = express();
 
 app.engine("hbs",engine({layoutsDir:"./views/layouts/", defaultLayout:"main-layouts",extname:"hbs"}));
@@ -19,4 +20,8 @@ app.use(Login)
 app.use(notfound)
 
 
-app.listen(3000)
+cone.sync().then(result =>{
+    app.listen(3000)
+}).catch(err =>{
+    console.log(err);
+})
