@@ -1,0 +1,5 @@
+.lindo {
+    display: grid;
+    grid-template-columns: 4 1fr;
+    gap: 5px;
+}
