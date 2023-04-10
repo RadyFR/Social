@@ -16,7 +16,9 @@ const usuarios = cone.define("usuarios", {
     },
     email:{
         type:Sequelize.STRING,
-        allowNull:false
+        allowNull:false,
+        indexes:[{unique:true}]
+        
     },
     password:{
         type:Sequelize.STRING,
