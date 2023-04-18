@@ -10,7 +10,19 @@ const usuarios = cone.define("usuarios", {
         allowNull:false
         
     },
-    Name:{
+    Nombre:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    Apellido:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    Telefono:{
+        type:Sequelize.INTEGER,
+        allowNull:false
+    },
+    FotoPerfil:{
         type:Sequelize.STRING,
         allowNull:false
     },
@@ -20,8 +32,17 @@ const usuarios = cone.define("usuarios", {
         indexes:[{unique:true}]
         
     },
+    NombreUsuario:{
+        type:Sequelize.STRING,
+        allowNull:false,
+        indexes:[{unique:true}]
+    },
     password:{
         type:Sequelize.STRING,
+        allowNull:false
+    },
+    Status:{
+        type: Sequelize.BOOLEAN,
         allowNull:false
     }
 
