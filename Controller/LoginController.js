@@ -94,6 +94,7 @@ exports.Register = (req, res, next) =>{
                     res.redirect("/showActive-user")
                  }).catch(err =>{
                     console.log(err);
+                    res.redirect("/")
                  })
               }).catch(err =>{
                 console.log(err);
